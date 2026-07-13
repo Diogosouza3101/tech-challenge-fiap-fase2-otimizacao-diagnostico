@@ -1,0 +1,1 @@
+# tech-challenge-fiap-fase2-otimizacao-diagnostico

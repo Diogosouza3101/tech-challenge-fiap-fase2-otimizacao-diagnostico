@@ -1,0 +1,23 @@
+**1. Resumo Executivo**
+
+O objetivo deste projeto foi desenvolver e comparar diferentes abordagens de otimização para um modelo de classificação de câncer de mama, visando melhorar a precisão e a eficácia na triagem e priorização de análise clínica. Os resultados mostram que as otimizações realizadas com Algoritmo Genético e outras técnicas apresentaram ganhos discretos em termos de desempenho, especialmente ao considerar a importância de reduzir falsos negativos em contextos médicos. O modelo serve como apoio à triagem e priorização de análise clínica, não substituindo o diagnóstico médico, mas auxiliando na identificação de casos que requerem atenção prioritária.
+
+**2. Comparação entre Modelo Original e Modelo Otimizado**
+
+A comparação entre o modelo original de Random Forest e as versões otimizadas com Algoritmo Genético mostra que as otimizações apresentaram ganhos discretos em termos de desempenho. O modelo otimizado com Algoritmo Genético manteve a mesma acurácia do modelo original (0.9737), com uma ligeira melhoria no ROC AUC (0.9970). Isso sugere que o Algoritmo Genético foi capaz de ajustar os parâmetros do modelo de forma a manter a estabilidade do desempenho e melhorar ligeiramente a capacidade de discriminação entre classes.
+
+**3. Interpretação do Limiar Clínico de 0.20**
+
+A introdução de um limiar clínico de 0.20 nos modelos otimizados resultou em uma mudança significativa nos resultados. Com este limiar, o recall para maligno aumentou para 1.0000, indicando que todos os casos malignos foram corretamente identificados. No entanto, isso veio ao custo de uma aumento nos falsos positivos (6 casos), o que pode levar a mais exames e procedimentos desnecessários. Essa trade-off entre recall e precisão é crítica em contextos médicos, onde a redução de falsos negativos é prioritária, mas o aumento de falsos positivos pode ter implicações significativas em termos de recursos e ansiedade para os pacientes.
+
+**4. Interpretação do Experimento com Hotstart e Mutuação Adaptativa**
+
+A utilização de hotstart e mutação adaptativa no Algoritmo Genético visou melhorar o monitoramento do processo evolutivo e potencialmente encontrar melhores soluções. Embora os resultados finais não tenham mostrado diferenças significativas em termos de desempenho do modelo, essas técnicas podem ter contribuído para uma exploração mais eficiente do espaço de soluções, o que é valioso em problemas complexos de otimização.
+
+**5. Riscos e Limitações**
+
+É importante reconhecer que qualquer modelo de Machine Learning aplicado à triagem médica carrega riscos e limitações. A dependência de dados de treinamento de alta qualidade, a possibilidade de viés nos dados e a necessidade de atualização contínua do modelo para refletir mudanças nos padrões de doença são apenas alguns dos desafios. Além disso, a interpretação dos resultados do modelo deve ser feita com cautela, considerando o contexto clínico e as implicações éticas de qualquer decisão baseada nos resultados do modelo.
+
+**6. Recomendação de Uso**
+
+Recomenda-se que o modelo otimizado seja utilizado como ferramenta de apoio à triagem e priorização de análise clínica, e não como substituto do diagnóstico médico. A escolha do limiar clínico deve ser feita com base em considerações clínicas e éticas, equilibrando a necessidade de detectar todos os casos malignos com a necessidade de minimizar falsos positivos. Além disso, é crucial que os profissionais de saúde envolvidos no processo de diagnóstico estejam cientes das limitações e dos riscos associados ao uso do modelo, e que estejam preparados para interpretar os resultados de forma crítica e informada.

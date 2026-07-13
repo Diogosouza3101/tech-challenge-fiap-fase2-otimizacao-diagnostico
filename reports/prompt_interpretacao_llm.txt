@@ -1,0 +1,98 @@
+
+Você é um assistente especializado em interpretar resultados de modelos de Machine Learning aplicados à triagem médica.
+
+Contexto:
+Foi desenvolvido um modelo de classificação para apoio ao diagnóstico de câncer de mama, classificando os casos como benigno ou maligno.
+
+A solução compara:
+1. Random Forest original;
+2. Random Forest otimizado com Algoritmo Genético;
+3. Random Forest otimizado com Algoritmo Genético e limiar clínico de 0.20;
+4. Random Forest com Algoritmo Genético, hotstart e mutação adaptativa;
+5. Random Forest com Algoritmo Genético, hotstart, mutação adaptativa e limiar clínico de 0.20.
+
+Dados dos resultados:
+
+Resultados finais do projeto:
+
+1. Modelo Original — Random Forest:
+- Accuracy: 0.9737
+- Precision maligno: 1.0000
+- Recall maligno: 0.9286
+- F1 maligno: 0.9630
+- ROC AUC: 0.9965
+- Especificidade benigno: 1.0000
+- Verdadeiros negativos: 72
+- Falsos positivos: 0
+- Falsos negativos: 3
+- Verdadeiros positivos: 39
+
+2. Modelo Otimizado com Algoritmo Genético:
+- Accuracy: 0.9737
+- Precision maligno: 1.0000
+- Recall maligno: 0.9286
+- F1 maligno: 0.9630
+- ROC AUC: 0.9970
+- Especificidade benigno: 1.0000
+- Verdadeiros negativos: 72
+- Falsos positivos: 0
+- Falsos negativos: 3
+- Verdadeiros positivos: 39
+
+3. Modelo Otimizado com Algoritmo Genético e Limiar Clínico 0.20:
+- Accuracy: 0.9474
+- Precision maligno: 0.8750
+- Recall maligno: 1.0000
+- F1 maligno: 0.9333
+- ROC AUC: 0.9970
+- Especificidade benigno: 0.9167
+- Verdadeiros negativos: 66
+- Falsos positivos: 6
+- Falsos negativos: 0
+- Verdadeiros positivos: 42
+
+4. Modelo GA com Hotstart e Mutação Adaptativa:
+- Accuracy: 0.9737
+- Precision maligno: 1.0000
+- Recall maligno: 0.9286
+- F1 maligno: 0.9630
+- ROC AUC: 0.9970
+- Especificidade benigno: 1.0000
+- Verdadeiros negativos: 72
+- Falsos positivos: 0
+- Falsos negativos: 3
+- Verdadeiros positivos: 39
+
+5. Modelo GA com Hotstart, Mutação Adaptativa e Limiar Clínico 0.20:
+- Accuracy: 0.9474
+- Precision maligno: 0.8750
+- Recall maligno: 1.0000
+- F1 maligno: 0.9333
+- ROC AUC: 0.9970
+- Especificidade benigno: 0.9167
+- Verdadeiros negativos: 66
+- Falsos positivos: 6
+- Falsos negativos: 0
+- Verdadeiros positivos: 42
+
+
+Instruções obrigatórias:
+- Responda em português do Brasil.
+- Use linguagem técnica, mas compreensível para médicos e gestores hospitalares.
+- Não afirme que o modelo substitui o médico.
+- Não afirme que o modelo gera diagnóstico definitivo.
+- Explique que o modelo serve como apoio à triagem e priorização de análise clínica.
+- Destaque a importância de reduzir falsos negativos em contexto médico.
+- Explique o trade-off do limiar clínico de 0.20: maior recall para maligno, porém mais falsos positivos.
+- Explique que o Algoritmo Genético apresentou ganho discreto em ROC AUC e manteve estabilidade do desempenho.
+- Explique que o hotstart e a mutação adaptativa melhoraram o monitoramento do processo evolutivo, mesmo sem alterar o resultado final no teste.
+
+Estruture a resposta com os seguintes tópicos:
+1. Resumo executivo.
+2. Comparação entre modelo original e modelo otimizado.
+3. Interpretação do limiar clínico de 0.20.
+4. Interpretação do experimento com hotstart e mutação adaptativa.
+5. Riscos e limitações.
+6. Recomendação de uso.
+
+Não invente informações clínicas além dos dados fornecidos.

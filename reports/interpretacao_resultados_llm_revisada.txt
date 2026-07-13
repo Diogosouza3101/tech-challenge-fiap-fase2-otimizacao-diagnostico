@@ -1,0 +1,56 @@
+
+1. Resumo executivo
+
+O projeto desenvolveu e comparou diferentes versões de um modelo de classificação para apoio à triagem de câncer de mama, utilizando Random Forest como modelo principal e Algoritmo Genético para otimização de hiperparâmetros.
+
+O modelo original apresentou desempenho elevado, com acurácia de 97,37%, recall para a classe maligna de 92,86% e ROC AUC de 0.9965. Após a otimização via Algoritmo Genético, a acurácia, o recall e a matriz de confusão permaneceram equivalentes, mas houve uma pequena melhora no ROC AUC, passando para 0.9970.
+
+A principal melhoria prática foi obtida com o ajuste do limiar de decisão para 0.20, que elevou o recall da classe maligna para 100%, eliminando os falsos negativos no conjunto de teste. Como contrapartida, houve aumento de falsos positivos e redução da acurácia para 94,74%.
+
+O modelo deve ser interpretado como uma ferramenta de apoio à triagem e priorização clínica, não como um sistema de diagnóstico autônomo.
+
+2. Comparação entre modelo original e modelo otimizado
+
+O modelo Random Forest original apresentou desempenho robusto, com 72 verdadeiros negativos, 39 verdadeiros positivos, 0 falsos positivos e 3 falsos negativos.
+
+O modelo otimizado com Algoritmo Genético manteve a mesma matriz de confusão do modelo original, também com 3 falsos negativos e 0 falsos positivos. A acurácia permaneceu em 97,37%, o recall maligno em 92,86% e o F1-score em 96,30%.
+
+A diferença observada foi no ROC AUC, que aumentou de 0.9965 para 0.9970, indicando uma melhora discreta na capacidade probabilística de separação entre casos benignos e malignos.
+
+3. Interpretação do limiar clínico de 0.20
+
+A aplicação do limiar clínico de 0.20 alterou a estratégia de decisão do modelo. Em vez de classificar como maligno apenas casos com probabilidade igual ou superior a 0.50, o modelo passou a sinalizar como malignos os casos com probabilidade igual ou superior a 0.20.
+
+Essa mudança aumentou a sensibilidade do modelo para casos malignos. O recall maligno passou de 92,86% para 100%, eliminando os falsos negativos no conjunto de teste.
+
+Em contexto médico, essa decisão é defensável porque falsos negativos representam casos malignos classificados como benignos, o que pode atrasar a avaliação clínica. O custo dessa abordagem foi o aumento de falsos positivos, que passaram de 0 para 6, reduzindo a especificidade de 100% para 91,67%.
+
+Assim, o limiar de 0.20 favorece uma abordagem mais conservadora para triagem, priorizando a identificação de possíveis casos malignos.
+
+4. Interpretação do experimento com hotstart e mutação adaptativa
+
+O experimento com hotstart e mutação adaptativa foi implementado para aprimorar o processo evolutivo do Algoritmo Genético.
+
+O hotstart permitiu inicializar parte da população com configurações previamente conhecidas, incluindo o modelo baseline e a melhor configuração encontrada nos experimentos anteriores. A mutação adaptativa foi utilizada para aumentar a exploração do espaço de busca quando o algoritmo apresentou estagnação.
+
+Embora essa abordagem não tenha alterado o desempenho final no conjunto de teste, ela fortaleceu a análise do Algoritmo Genético ao permitir monitorar métricas como fitness médio, desvio padrão do fitness, quantidade de indivíduos únicos, entropia genética, taxa de mutação por geração e tempo de execução.
+
+Dessa forma, o experimento contribuiu para uma avaliação mais completa da convergência, diversidade e estabilidade do processo evolutivo.
+
+5. Riscos e limitações
+
+Apesar dos bons resultados, o modelo apresenta limitações importantes.
+
+Primeiro, os resultados foram obtidos em um conjunto de dados específico e controlado, sendo necessária validação com bases externas antes de qualquer uso em ambiente clínico real.
+
+Segundo, o ajuste do limiar de decisão envolve um trade-off: ao reduzir falsos negativos, o modelo aumenta falsos positivos. Isso pode gerar encaminhamentos adicionais para avaliação médica.
+
+Terceiro, o modelo não considera informações clínicas complementares, histórico do paciente, exames de imagem, laudos médicos ou avaliação especializada.
+
+Portanto, o sistema não deve ser utilizado como ferramenta de diagnóstico definitivo.
+
+6. Recomendação de uso
+
+A versão recomendada para triagem é o Random Forest otimizado com Algoritmo Genético e limiar clínico de 0.20, pois essa configuração eliminou os falsos negativos no conjunto de teste e atingiu recall maligno de 100%.
+
+A recomendação é utilizar o modelo como apoio à priorização de casos que devem receber análise clínica mais detalhada. O resultado do modelo deve ser interpretado por profissionais de saúde e integrado a protocolos médicos, mantendo o diagnóstico final sob responsabilidade médica.

@@ -394,7 +394,7 @@ Ele documenta:
 Link do vídeo:
 
 ```text
-"https://www.youtube.com/watch?v=bjvZEg8-Cgk"
+https://www.youtube.com/watch?v=bjvZEg8-Cgk
 ```
 
 O vídeo apresenta:

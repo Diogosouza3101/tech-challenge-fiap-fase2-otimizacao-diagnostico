@@ -394,7 +394,7 @@ Ele documenta:
 Link do vídeo:
 
 ```text
-INSERIR_LINK_DO_YOUTUBE_OU_VIMEO_AQUI
+"Sendo gravação"
 ```
 
 O vídeo apresenta:
